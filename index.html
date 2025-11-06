@@ -35,6 +35,218 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /**********topheader************/
+
+        .top-header {
+            background: #103c26;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .top-header .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gov-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .indian-flag {
+            width: 30px;
+            height: 20px;
+            background: linear-gradient(to bottom, #FF9933 33%, white 33%, white 66%, #138808 66%);
+            border: 1px solid #ccc;
+        }
+
+        .blink {
+            animation: blink-animation 2.5s steps(2, start) infinite;
+            color: #e74c3c;
+            /* optional: highlight with color */
+            font-size: 13px;
+
+        }
+
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+
+        .blink a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .accessibility-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 13px;
+        }
+
+        .top-right-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            min-width: 220px;
+            display: none;
+        }
+
+        .language-selector:hover .language-dropdown {
+            display: block;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            padding: 10px;
+        }
+
+        .language-option {
+            padding: 4px 12px;
+            cursor: pointer;
+            color: #333;
+            font-size: 12px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            margin: 2px;
+        }
+
+        .language-option:hover {
+            background-color: #f0f8f0;
+        }
+
+        .language-option.active {
+            background-color: #e8f5e8;
+            font-weight: 600;
+        }
+
+        .language-option.one {
+            background-color: #FFE7E2;
+            color: #D96852;
+        }
+
+        .language-option.two {
+            background-color: #DAEBFF;
+            color: #1594EE;
+        }
+
+        .language-option.three {
+            background-color: #FFC3C3;
+            color: #FF4A4A;
+        }
+
+        .language-option.four {
+            background-color: #DED4F4;
+            color: #6D2CFA;
+        }
+
+        .language-option.five {
+            background-color: #D2EDCF;
+            color: #5C9855;
+        }
+
+        .language-option.six {
+            background-color: #FEFBDF;
+            color: #B6A936;
+        }
+
+        .language-option.seven {
+            background-color: #ECDFFE;
+            color: #7F57B5;
+        }
+
+        .language-option.eight {
+            background-color: #DFEDFE;
+            color: #327AD2;
+        }
+
+        .language-option.nine {
+            background-color: #FEF4DB;
+            color: #FF8A00;
+        }
+
+        .language-option.ten {
+            background-color: #FEDFF7;
+            color: #BA389C;
+        }
+
+        .language-option.eleven {
+            background-color: #E3FEDF;
+            color: #429436;
+        }
+
+        .language-option.twelve {
+            background-color: #FFE7E2;
+            color: #A25E50;
+        }
+
+        .accessibility-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            width: 72px;
+            height: 32px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+
         /* Header Styles */
         .navbar {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -558,10 +770,43 @@
                 height: auto;
             }
         }
+
+        button.bhashini-dropdown-btn {
+            position: fixed;
+            bottom: 0;
+        }
+
+        .bhashini-dropdown-content {
+
+            max-height: 29.5rem !important;
+
+
+        }
     </style>
 </head>
 
 <body>
+
+    <header class="top-header">
+        <div class="container-fluid px-4">
+            <div class="gov-brand">
+
+                <span>Punjab Pollution Control Board</span>
+            </div>
+            <div>
+
+            </div>
+            <div class="top-right-controls">
+                <li style="list-style: none;">
+                    <a style="text-decoration: none; color: #fff;" href="javascript:void(0)" id="accessibilityBtn">
+                        <span><i class="fa-solid fa-universal-access"></i></span> Accessibility Option
+                    </a>
+                </li>
+                <div class="bhashini-plugin-container mx-3"></div>
+            </div>
+        </div>
+    </header>
+
     <!-- Header -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -2138,6 +2383,216 @@
             });
         });
     </script>
+    <!-- Accessibility Toolbar -->
+    <div id="accessibilityToolbar" class="accessibility-toolbar" style="display:none;">
+        <div class="accessibility-toolbar-inner">
+            <span class="accessibility-title">Accessibility Options</span>
+            <button class="accessibility-close" id="accessibilityCloseBtn" title="Close">&times;</button>
+            <div class="accessibility-controls">
+                <button class="access-btn" id="increaseFont" title="Increase Font Size"
+                    style="font-size:30px">A+<span>Bigger Text</span></button>
+                <button class="access-btn" id="decreaseFont" title="Decrease Font Size" style="font-size:30px">A-
+                    <span>Smaller text</span></button>
+                <button class="access-btn" id="resetFont" title="Reset Font Size" style="font-size:30px"><img
+                        src="images/text-spacing.svg"><span>Text Spacing </span></button>
+                <button class="access-btn" id="" title="Reset Font Size" style="font-size:30px"><img
+                        src="images/line-height.svg"><span>Line Height</span></button>
+                <button class="access-btn" id="" title="Reset Font Size" style="font-size:30px"><img
+                        src="images/link-icon.svg"><span>Highlight Links</span></button>
+                <button class="access-btn" id="" title="Reset Font Size" style="font-size:30px"><img style="width:30px;"
+                        src="images/df-icon.svg"><span>Dyslexia Friendly</span></button>
+                <button class="access-btn" id="" title="Reset Font Size" style="font-size:30px"><img style="width:30px;"
+                        src="images/cursor.svg"><span>Cursor</span></button>
+                <button class="access-btn" id="toggleHighContrast" title="Toggle High Contrast">
+                    <span style="font-weight:bold; font-size:30px">&#9681;</span> <span>High Contrast </span>
+                </button>
+                <button class="access-btn" id="toggleGrayscale" title="Toggle Grayscale">
+                    <span style="font-weight:bold; font-size:30px">&#9724;</span><span>Grayscale </span>
+                </button>
+
+                <button class="access-btn" id="toggleGrayscale" title="Toggle Grayscale">
+                    <span style="font-weight:bold; font-size:30px"><img src="images/speech.svg"></span><span>Text to
+                        Speech </span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Accessibility Toolbar -->
+
+    <style>
+        .accessibility-toolbar {
+            position: fixed;
+            top: 0px;
+            right: 0;
+            width: 531px;
+            background: #dfdfdf;
+            color: #fff;
+            z-index: 9999;
+            box-shadow: 0 2px 12px #39ef7440;
+            padding: 0;
+            border-radius: 15px 0px 0px 15px;
+            border: 5px solid #ffffff;
+        }
+
+        .accessibility-toolbar-inner {
+            display: block;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .accessibility-title {
+            font-weight: 600;
+            font-size: 1.08em;
+            margin-right: 24px;
+            background: #005736;
+            width: 100%;
+            display: block;
+            padding: 10px;
+            border-radius: 10px 0px 0px 0px;
+        }
+
+        .accessibility-controls {
+            width: 100%;
+            padding: 12px 20px;
+        }
+
+        .accessibility-controls .access-btn {
+            background: #ffffff;
+            color: #222;
+            border: none;
+            border-radius: 6px;
+            margin: 8px 6px;
+            padding: 23px 5px;
+            font-size: 1.08em;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            font-family: "Noto Sans", sans-serif;
+            width: 145px
+        }
+
+        .accessibility-controls span {
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+
+        .accessibility-controls .access-btn:hover {
+            background: #dbffe9;
+        }
+
+        .accessibility-close {
+            position: absolute;
+            right: 12px;
+            top: 8px;
+            background: transparent;
+            color: #fff;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        body.high-contrast {
+            background: #000 !important;
+            color: #fff !important;
+        }
+
+        body.high-contrast a,
+        body.high-contrast .access-btn {
+            color: #fff !important;
+            background: #000 !important;
+            border-color: #fff !important;
+        }
+
+        body.grayscale {
+            filter: grayscale(1) !important;
+        }
+
+        .accessibility-controls .access-btn.active {
+            background: #dbffe9 !important;
+            border: 2px solid #39ef74;
+            box-shadow: 0 0 8px #39ef7480;
+        }
+    </style>
+
+    <script>
+        // Accessibility Toolbar Logic
+        document.getElementById('accessibilityBtn').addEventListener('click', function () {
+            document.getElementById('accessibilityToolbar').style.display = 'block';
+        });
+        document.getElementById('accessibilityCloseBtn').addEventListener('click', function () {
+            document.getElementById('accessibilityToolbar').style.display = 'none';
+        });
+
+        // Font size logic
+        var html = document.documentElement;
+        var defaultFontSize = 16;
+        var currentFontSize = defaultFontSize;
+        function setFontSize(size) {
+            html.style.fontSize = size + 'px';
+        }
+        document.getElementById('increaseFont').onclick = function () {
+            if (currentFontSize < 22) {
+                currentFontSize += 2;
+                setFontSize(currentFontSize);
+            }
+        };
+        document.getElementById('decreaseFont').onclick = function () {
+            if (currentFontSize > 12) {
+                currentFontSize -= 2;
+                setFontSize(currentFontSize);
+            }
+        };
+        document.getElementById('resetFont').onclick = function () {
+            currentFontSize = defaultFontSize;
+            setFontSize(currentFontSize);
+        };
+
+        // High contrast logic
+        document.getElementById('toggleHighContrast').onclick = function () {
+            document.body.classList.toggle('high-contrast');
+        };
+
+        // Grayscale logic
+        document.getElementById('toggleGrayscale').onclick = function () {
+            document.body.classList.toggle('grayscale');
+        };
+
+        document.querySelectorAll('.accessibility-controls .access-btn').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                // If already active, remove active and feature
+                if (btn.classList.contains('active')) {
+                    btn.classList.remove('active');
+                    // Remove feature for each button
+                    if (btn.id === 'increaseFont' || btn.id === 'decreaseFont' || btn.id === 'resetFont') {
+                        // Reset font size
+                        currentFontSize = defaultFontSize;
+                        setFontSize(currentFontSize);
+                    }
+                    if (btn.id === 'toggleHighContrast') {
+                        document.body.classList.remove('high-contrast');
+                    }
+                    if (btn.id === 'toggleGrayscale') {
+                        document.body.classList.remove('grayscale');
+                    }
+                    return; // Stop further execution
+                }
+                // Otherwise, activate and apply feature
+                document.querySelectorAll('.accessibility-controls .access-btn').forEach(function (b) {
+                    b.classList.remove('active');
+                });
+                btn.classList.add('active');
+                // Features already handled by other click handlers
+            });
+        });
+    </script>
+    <script src="https://translation-plugin.bhashini.co.in/v2/website_translation_utility.js" data-pos-x="100"
+        data-pos-y="100"></script>
 </body>
 
 </html>
