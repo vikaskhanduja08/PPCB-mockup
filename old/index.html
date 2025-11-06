@@ -69,7 +69,7 @@
 
         .time-display {
             background: rgba(255, 255, 255, 0.2);
-            padding: 16px 15px;
+            padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.9rem;
             color: white;
@@ -466,98 +466,6 @@
                 display: none;
             }
         }
-
-        .feature-card {
-            position: relative;
-            background: linear-gradient(135deg, #ffffff, #f7fdf9);
-            border-radius: 20px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            text-align: center;
-            padding: 40px 20px;
-            height: 180px;
-            overflow: hidden;
-            border: 1px solid rgba(11, 107, 58, 0.1);
-            cursor: pointer;
-        }
-
-        /* Unique gradient overlays for each card */
-        .feature-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #0b6b3a, #13a159);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 0;
-        }
-
-        .feature-card:nth-child(1)::before {
-            background: linear-gradient(135deg, #00b09b, #96c93d);
-        }
-
-        .feature-card:nth-child(2)::before {
-            background: linear-gradient(135deg, #11998e, #38ef7d);
-        }
-
-        .feature-card:nth-child(3)::before {
-            background: linear-gradient(135deg, #43cea2, #185a9d);
-        }
-
-        .feature-card:nth-child(4)::before {
-            background: linear-gradient(135deg, #56ab2f, #a8e063);
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 15px 30px rgba(11, 107, 58, 0.25);
-        }
-
-        .feature-icon {
-            font-size: 50px;
-            color: #0b6b3a;
-            margin-bottom: 20px;
-            z-index: 1;
-            position: relative;
-            transition: all 0.4s ease;
-        }
-
-        .feature-card:hover .feature-icon {
-            color: #fff;
-            transform: scale(1.2) rotate(5deg);
-        }
-
-        .feature-title {
-            font-weight: 600;
-            color: #0b6b3a;
-            font-size: 22px;
-            z-index: 1;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .feature-card:hover .feature-title {
-            color: #fff;
-        }
-
-        .card-link {
-            text-decoration: none;
-        }
-
-        @media (max-width: 767px) {
-            .feature-card {
-                margin-bottom: 20px;
-                height: auto;
-            }
-        }
     </style>
 </head>
 
@@ -573,8 +481,8 @@
                     <img src="./images/logo.png" class="img-fluid" />
                 </div>
                 <div class="header-title">
-                    <div>ਪੰਜਾਬ ਪ੍ਰਦੂਸ਼ਣ ਨਿਯੰਤਰਣ ਬੋਰਡ</div>
-                    <small class="d-none d-md-block"> Punjab Pollution Control Board</small>
+                    <div>पंजाब राज्य प्रदूषण नियंत्रण बोर्ड</div>
+                    <small class="d-none d-md-block">Punjab State Pollution Control Board</small>
                 </div>
             </a>
             <div class="header-controls ms-auto">
@@ -593,111 +501,118 @@
         <div class="row">
             <!-- Sidebar -->
             <div class="col-lg-3 col-md-3 sidebar" id="sidebar">
-                <div class="sidebar-title"></div>
+                <div class="sidebar-title">Pollution Control</div>
                 <div class="nav flex-column">
-                    <a href="#" class="nav-link active" data-tab="home">
-                        <i class="fas fa-home nav-icon"></i>
-                        <span>Home</span>
-                    </a>
-                    <a href="#" class="nav-link" data-tab="air">
+                    <a href="#" class="nav-link active" data-tab="air">
                         <i class="fas fa-wind nav-icon"></i>
-                        <span>Air Quality Level</span>
+                        <span>Air Quality</span>
                     </a>
                     <a href="#" class="nav-link" data-tab="water">
                         <i class="fas fa-tint nav-icon"></i>
-                        <span>Water Quality Level</span>
+                        <span>Water Quality</span>
                     </a>
                     <a href="#" class="nav-link" data-tab="waste">
                         <i class="fas fa-trash nav-icon"></i>
-                        <span>Waste Management Level</span>
+                        <span>Waste Management</span>
                     </a>
                     <a href="#" class="nav-link" data-tab="ewaste">
                         <i class="fas fa-laptop nav-icon"></i>
-                        <span>E-Waste Level</span>
+                        <span>E-Waste</span>
                     </a>
                     <a href="#" class="nav-link" data-tab="biomedical">
                         <i class="fas fa-syringe nav-icon"></i>
-                        <span>Biomedical Waste Level</span>
+                        <span>Biomedical Waste</span>
                     </a>
                     <a href="#" class="nav-link" data-tab="groundwater">
                         <i class="fas fa-water nav-icon"></i>
-                        <span>Groundwater Level</span>
+                        <span>Groundwater</span>
                     </a>
                     <a href="#" class="nav-link" data-tab="grievance">
                         <i class="fas fa-comments nav-icon"></i>
-                        <span>Grievance Management</span>
+                        <span>Grievance Response</span>
                     </a>
                 </div>
             </div>
 
             <!-- Main Content -->
             <div class="col-lg-9 col-md-9 main-content">
-                <!-- Home Dashboard -->
-                <div id="home" class="tab-content active">
-                    <div class="dashboard-title">
-                        <div class="text-center">
-                            <h2>Welcome to Punjab Pollution Control Board</h2>
-                            <p class="text-muted">Environmental Intelligence Hub - Monitor and Manage Pollution Across
-                                Punjab</p>
-                        </div>
-                    </div>
-
-                    <div class="row g-4">
-                        <!-- Consent Management -->
-                        <div class="col-md-6 col-lg-6">
-                            <a href="Consent-Management.html" target="_blank" class="card-link">
-                                <div class="feature-card">
-                                    <i class="fa-solid fa-file-signature feature-icon"></i>
-                                    <div class="feature-title">Consent Management</div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Project Monitoring -->
-                        <div class="col-md-6 col-lg-6">
-                            <a href="project-moniter.html" target="_blank" class="card-link">
-                                <div class="feature-card">
-                                    <i class="fa-solid fa-chart-line feature-icon"></i>
-                                    <div class="feature-title">Project Monitoring</div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- GIS Hotspot -->
-                        <div class="col-md-6 col-lg-6">
-                            <a href="GIS.html" target="_blank" class="card-link">
-                                <div class="feature-card">
-                                    <i class="fa-solid fa-map-location-dot feature-icon"></i>
-                                    <div class="feature-title">GIS Hotspot</div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- All District AQI -->
-                        <div class="col-md-6 col-lg-6">
-                            <a href="district-wise.html" target="_blank" class="card-link">
-                                <div class="feature-card">
-                                    <i class="fa-solid fa-wind feature-icon"></i>
-                                    <div class="feature-title">All District Wise AQI</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-
-                </div>
-
                 <!-- Air Quality Dashboard -->
-                <div id="air" class="tab-content">
+                <div id="air" class="tab-content active">
                     <div class="dashboard-title d-flex align-items-center justify-content-between">
                         <div>
                             <h2>Air Quality Monitoring</h2>
                             <p class="text-muted">Real-time air pollution data and analysis across Punjab</p>
                         </div>
 
+                        <a href="district-wise.html" target="_blank"
+                            style="background-color: #0b6b3a; padding: 12px;border-radius: 12px; color:#fff; text-decoration: none;">All
+                            District
+                            Wise
+                            AQI</a>
                     </div>
 
-
+                    <div class="row mb-4">
+                        <div class="col-xl-3 col-md-6 mb-3">
+                            <div class="kpi-card">
+                                <div class="kpi-header">
+                                    <div class="kpi-title">STATE AQI</div>
+                                    <div class="kpi-icon" style="background-color: var(--warning);">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                </div>
+                                <div class="kpi-value">156</div>
+                                <div class="kpi-trend trend-up">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>12% from last week</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-3">
+                            <div class="kpi-card">
+                                <div class="kpi-header">
+                                    <div class="kpi-title">PM2.5 (μg/m³)</div>
+                                    <div class="kpi-icon" style="background-color: var(--danger);">
+                                        <i class="fas fa-smog"></i>
+                                    </div>
+                                </div>
+                                <div class="kpi-value">98.2</div>
+                                <div class="kpi-trend trend-down">
+                                    <i class="fas fa-arrow-down"></i>
+                                    <span>5% from yesterday</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-3">
+                            <div class="kpi-card">
+                                <div class="kpi-header">
+                                    <div class="kpi-title">PM10 (μg/m³)</div>
+                                    <div class="kpi-icon" style="background-color: var(--warning);">
+                                        <i class="fas fa-industry"></i>
+                                    </div>
+                                </div>
+                                <div class="kpi-value">142</div>
+                                <div class="kpi-trend trend-up">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>8% from last week</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-3">
+                            <div class="kpi-card">
+                                <div class="kpi-header">
+                                    <div class="kpi-title">GOOD AIR DAYS</div>
+                                    <div class="kpi-icon" style="background-color: var(--accent);">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                </div>
+                                <div class="kpi-value">64%</div>
+                                <div class="kpi-trend trend-up">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>3% from last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="chart-container mb-4">
                         <div class="chart-header">
@@ -1778,7 +1693,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -1838,25 +1752,6 @@
                 }
             });
         });
-
-        // Helper function to switch tabs (used for Quick Access links on Home)
-        function switchTab(tabId) {
-            document.querySelectorAll('.nav-link').forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('data-tab') === tabId) {
-                    item.classList.add('active');
-                }
-            });
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.getElementById(tabId).classList.add('active');
-
-            // Close mobile sidebar after selection
-            if (window.innerWidth < 992) {
-                document.getElementById('sidebar').classList.remove('show');
-            }
-        }
 
         // Initialize Charts
         // Air Quality Chart
