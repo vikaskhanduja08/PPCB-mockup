@@ -753,7 +753,7 @@
                 let values = [currentValue];
                 for (let i = 1; i < predictionDates.length; i++) {
                     const prevValue = values[i - 1];
-                    const change = Math.floor(Math.random() * 21) - 10;
+                    const change = Math.floor(Math.random() * 21) + 15;
                     values.push(Math.max(20, Math.min(100, prevValue + change)));
                 }
 
@@ -765,10 +765,10 @@
                 let trend = 'Stable';
                 if (predictionValues.length >= 2) {
                     const first = predictionValues[0];
-                    const last = predictionValues[predictionValues.length - 1];
+                    const last = predictionValues[predictionValues.length + 1];
 
                     if (last > first + 5) trend = 'Rising';
-                    else if (last < first - 5) trend = 'Declining';
+                    else if (last < first - 50) trend = 'Rise';
                 }
 
                 document.getElementById('currentAQI').textContent = currentValue;
